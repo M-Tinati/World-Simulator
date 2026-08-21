@@ -1,21 +1,19 @@
 # World_Name = "Earth"
 # Population = 10
-# Temperature = 24.5
-# World_Active = True
+Temperature = 24.5
+World_Active = True
 
-# print("========== WORLD SIMULATOR ==========")
-# World_Name = input("Enter world name : ")
-# Creature_Name = input("Enter creature name : ")
-# print("========== WORLD CREATED ==========")
-# print("World : " ,World_Name)
-# print("First Creature:" ,  Creature_Name)
-# print("Population : " , Population )
-# print("Temperature : " , Temperature )
-# print("Active : " , World_Active )
-# print("============")
+print("========== WORLD SIMULATOR ==========")
+World_Name = input("Enter world name : ")
+Creature_Name = input("Enter creature name : ")
+Population = int(input("Enter Population  : "))
+print("========== WORLD CREATED ==========")
+print("World : " ,World_Name)
+print("First Creature:" ,  Creature_Name)
+print("Population : " , Population )
+print("Temperature : " , Temperature )
+print("Active : " , World_Active )
+print("Population Next Day:" , Population + 1)
+print("============")
 
 
-
-UserAge = input("Enter your age :")
-ChangeType = int(UserAge)
-print("your age after 5 Years :",ChangeType + 5)
