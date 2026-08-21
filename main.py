@@ -6,13 +6,30 @@ World_Name = input("Enter world name : ")
 Creature_Name = input("Enter creature name : ")
 Population = int(input("Enter Population  : "))
 World_Active = int(input("Is the game active?"))
+hungry = int(input("Hungry: "))
+thirsty = int(input("Thirsty: "))
+
 print("========== WORLD CREATED ==========")
-print("World : " ,World_Name)
+print("World : " , World_Name)
 print("First Creature:" ,  Creature_Name)
-print("Population : " , Population )
+if Population > 0:
+    print("World has life")
+elif Population == 0 :
+    print("World is empty")
+else:
+    print("Invalid population")
 print("Temperature : " , Temperature )
-print("Active : " , bool(World_Active) )
+if World_Active == 1:
+    print("========== WORLD STATUS ==========") 
+    print("World is running...") 
+    print("The world can continue.") 
+elif World_Active == 0:
+    print("========== WORLD STATUS ==========") 
+    print("World is stopped.") 
+    print("Simulation cannot continue.")
+if hungry == 1 or thirsty == 1:
+    print("Creature needs food or water.")
+else:
+    print("Creature is fine.")
 print("Population Next Day:" , Population + 1)
 print("============")
-
-
