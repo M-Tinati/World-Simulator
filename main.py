@@ -60,14 +60,16 @@
 # print("========== SIMULATION END ==========")
 
 
-World_Active = int(input("Is the game active? 1 or 0 : "))
-print("========== WORLD SIMULATOR ==========")
-while World_Active == 1:
-    for i in range(1,11):
-        print("Day" ,i)
-        if i == 5:
-            print("Rain started!")
-            continue
-    if i == 10:
-        World_Active = 0
-print("========== SIMULATION END ==========")
+
+# World_Active = int(input("Is the game active? 1 or 0 : "))
+# print("========== WORLD SIMULATOR ==========")
+# if World_Active == 1:
+#     for i in range(1,11):
+#             print("Day" ,i)
+#             if i == 5:
+#                 print("Rain started!")
+# elif World_Active == 0:
+#     print("World is stopped.")
+# print("========== SIMULATION END ==========")
+
+
