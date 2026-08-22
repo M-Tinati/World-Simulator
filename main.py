@@ -45,10 +45,12 @@
 
 
 
-World_Active = int(input("Is the game active? 1 \ 0"))
+World_Active = int(input("Is the game active? 1 or 0 : "))
 print("========== WORLD SIMULATOR ==========")
-if World_Active == 0:
-    while i < 6:
-        print("Day" , i)
-        i += 1
+i = 0
+while World_Active == 1:
+    print("Day" ,  i + 1)
+    i += 1
+    if i == 5:
+        break
 print("========== SIMULATION END ==========")
