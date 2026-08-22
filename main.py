@@ -45,12 +45,29 @@
 
 
 
+
+
+# for i in range(1,11):
+#     while World_Active == 1:
+#         print("Day" ,  i + 1)
+#         i += 1
+#         if i == 5:
+#             print("Rain started!")
+#             continue
+#         else:
+#             World_Active = 0
+        
+# print("========== SIMULATION END ==========")
+
+
 World_Active = int(input("Is the game active? 1 or 0 : "))
 print("========== WORLD SIMULATOR ==========")
-i = 0
 while World_Active == 1:
-    print("Day" ,  i + 1)
-    i += 1
-    if i == 5:
-        break
+    for i in range(1,11):
+        print("Day" ,i)
+        if i == 5:
+            print("Rain started!")
+            continue
+    if i == 10:
+        World_Active = 0
 print("========== SIMULATION END ==========")
