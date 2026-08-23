@@ -81,3 +81,38 @@ while len(creatures) < 4:
 for creature  in creatures:
         print(creature)
 print("========== SIMULATION END ==========")    
+
+
+print("========== WORLD SIMULATOR ==========")
+
+creatures = []
+
+creature1 = {
+    "name": "Monster",
+    "age": 2500,
+    "health": 100
+}
+creatures.append(creature1)
+
+creature2 = {
+    "name": "Wolf",
+    "age": 7,
+    "health": 85
+}
+creatures.append(creature2)
+
+creature3 = {
+    "name": "Human",
+    "age": 30,
+    "health": 95
+}
+creatures.append(creature3)
+
+for creature in creatures:
+    print()
+    print("Creature:", creature["name"])
+    print("Age:", creature["age"])
+    print("Health:", creature["health"])
+
+print()
+print("========== SIMULATION END ==========")
