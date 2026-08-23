@@ -73,3 +73,11 @@
 # print("========== SIMULATION END ==========")
 
 
+print("========== WORLD SIMULATOR ==========")
+creatures = []
+while len(creatures) < 4:
+    Creature_Name = input("Enter creature name : ")
+    creatures.append(Creature_Name)
+for creature  in creatures:
+        print(creature)
+print("========== SIMULATION END ==========")    
