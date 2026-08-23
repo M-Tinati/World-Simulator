@@ -116,3 +116,33 @@ for creature in creatures:
 
 print()
 print("========== SIMULATION END ==========")
+print("========== WORLD SIMULATOR ==========")
+
+creatures = []
+
+count = int(input("How many creatures? "))
+
+for i in range(count):
+    name = input("Enter creature name: ")
+    age = int(input("Enter creature age: "))
+    health = int(input("Enter creature health: "))
+
+    creature = {
+        "name": name,
+        "age": age,
+        "health": health
+    }
+
+    creatures.append(creature)
+
+print()
+print("========== CREATURES ==========")
+
+for creature in creatures:
+    print()
+    print("Creature:", creature["name"])
+    print("Age:", creature["age"])
+    print("Health:", creature["health"])
+
+print()
+print("========== SIMULATION END ==========")
