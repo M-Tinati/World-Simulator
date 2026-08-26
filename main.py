@@ -1,37 +1,53 @@
-Temperature = 24.5
-
 print("========== WORLD SIMULATOR ==========")
 
-World_Name = input("Enter world name : ")
-Population = int(input("Enter Population  : "))
-World_Active = int(input("Is the game active? "))
-hungry = int(input("Hungry: "))
-thirsty = int(input("Thirsty: "))
-alive = bool(int(input("Alive: ")))
+Temperature = 24.5
 
+World_Name = input("Enter world name: ")
+Population = int(input("Enter Population: "))
+World_Active = int(input("Is the game active? (1/0): "))
+
+print()
 print("========== WORLD CREATED ==========")
-print("World : ", World_Name)
+print("World:", World_Name)
+print("Temperature:", Temperature)
 
-if Population > 0:
+if Population >= 3:
 
     Creatures = []
 
     for i in range(Population):
-        Creature_Name = input("Enter creature name: ")
-        Creature_Name = input("Enter creature name: ")
-        Creature_Name = input("Enter creature name: ")
-        Creature_Name = input("Enter creature name: ")
-        Creatures.append(Creature_Name)
-        
-    print("Creatures created:")
+
+        print()
+        print("Enter information for Creature", i + 1)
+
+        Creature_Name = input("Name: ")
+        Creature_Age = int(input("Age: "))
+        Creature_Health = int(input("Health: "))
+
+        x = int(input("Position X: "))
+        y = int(input("Position Y: "))
+
+        Creature = {
+            "name": Creature_Name,
+            "age": Creature_Age,
+            "health": Creature_Health,
+            "position": (x, y)
+        }
+
+        Creatures.append(Creature)
+
+    print()
+    print("========== CREATURES ==========")
 
     for creature in Creatures:
-        print(creature)
+        print("Creature:", creature["name"])
+        print("Age:", creature["age"])
+        print("Health:", creature["health"])
+        print("Position:", creature["position"])
+        print()
 
 else:
-    print("Invalid population.")
-
-print("Temperature : ", Temperature)
+    print("Population must be at least 3.")
 
 if World_Active == 1:
     print("========== WORLD STATUS ==========")
@@ -43,20 +59,7 @@ elif World_Active == 0:
     print("World is stopped.")
     print("Simulation cannot continue.")
 
-if not alive:
-    print("Creature is dead.")
 else:
-    print("Creature is alive.")
-
-if hungry == 1 or thirsty == 1:
-    print("Creature needs food or water.")
-else:
-    print("Creature is fine.")
-
-if Population > 0:
-    print("Population Next Day:", Population + 1)
+    print("Invalid world status.")
 
 print("============")
-
-
-
