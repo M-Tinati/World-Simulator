@@ -18,8 +18,11 @@ if Population > 0:
 
     for i in range(Population):
         Creature_Name = input("Enter creature name: ")
+        Creature_Name = input("Enter creature name: ")
+        Creature_Name = input("Enter creature name: ")
+        Creature_Name = input("Enter creature name: ")
         Creatures.append(Creature_Name)
-
+        
     print("Creatures created:")
 
     for creature in Creatures:
@@ -57,7 +60,3 @@ print("============")
 
 
 
-Width =(100)
-Height =(100)
-
-print(Width,Height)
