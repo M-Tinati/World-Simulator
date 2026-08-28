@@ -50,13 +50,13 @@ while day < 5:
     print()
     print("========== DAY", day, "==========")
     
-    
+    new_creatures = Creatures.copy()    
     # کم شدن Health موجودات
-    for creature in Creatures:
-        if creature["health"] < 0:
-            Creatures.remove(creature)
+    for creature in new_creatures:        
         creature["health"] = creature["health"] - 10
-
+        if creature["health"] <= 0:
+            Creatures.remove(creature)
+            
         print("Creature:", creature["name"])
         print("Age:", creature["age"])
         print("Health:", creature["health"])
@@ -79,3 +79,8 @@ while day < 5:
     day += 1
 
 print("============")
+
+
+
+
+
