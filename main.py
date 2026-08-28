@@ -10,56 +10,61 @@ print()
 print("========== WORLD CREATED ==========")
 print("World:", World_Name)
 print("Temperature:", Temperature)
+day = 1
+while day < 5:
+    
+    print("day is : " , day)
+    if Population >= 3:
 
-if Population >= 3:
+        Creatures = []
 
-    Creatures = []
+        for i in range(Population):
 
-    for i in range(Population):
+            print()
+            print("Enter information for Creature", i + 1)
 
+            Creature_Name = input("Name: ")
+            Creature_Age = int(input("Age: "))
+            Creature_Health = int(input("Health: "))
+
+            x = int(input("Position X: "))
+            y = int(input("Position Y: "))
+
+            Creature = {
+                "name": Creature_Name,
+                "age": Creature_Age,
+                "health": Creature_Health,
+                "position": (x, y)
+            }
+
+            Creatures.append(Creature)
+            print (Creature_Health - 10)
         print()
-        print("Enter information for Creature", i + 1)
+        print("========== CREATURES ==========")
 
-        Creature_Name = input("Name: ")
-        Creature_Age = int(input("Age: "))
-        Creature_Health = int(input("Health: "))
+        for creature in Creatures:
+            print("Creature:", creature["name"])
+            print("Age:", creature["age"])
+            print("Health:", creature["health"] - 10)
+            print("Position:", creature["position"])
+            print()
 
-        x = int(input("Position X: "))
-        y = int(input("Position Y: "))
+    else:
+        print("Population must be at least 3.")
 
-        Creature = {
-            "name": Creature_Name,
-            "age": Creature_Age,
-            "health": Creature_Health,
-            "position": (x, y)
-        }
+    if World_Active == 1:
+        print("========== WORLD STATUS ==========")
+        print("World is running...")
+        print("The world can continue.")
 
-        Creatures.append(Creature)
+    elif World_Active == 0:
+        print("========== WORLD STATUS ==========")
+        print("World is stopped.")
+        print("Simulation cannot continue.")
 
-    print()
-    print("========== CREATURES ==========")
-
-    for creature in Creatures:
-        print("Creature:", creature["name"])
-        print("Age:", creature["age"])
-        print("Health:", creature["health"])
-        print("Position:", creature["position"])
-        print()
-
-else:
-    print("Population must be at least 3.")
-
-if World_Active == 1:
-    print("========== WORLD STATUS ==========")
-    print("World is running...")
-    print("The world can continue.")
-
-elif World_Active == 0:
-    print("========== WORLD STATUS ==========")
-    print("World is stopped.")
-    print("Simulation cannot continue.")
-
-else:
-    print("Invalid world status.")
-
+    else:
+        print("Invalid world status.")
+        
+    day +=1
 print("============")
+
