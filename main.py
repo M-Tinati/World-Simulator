@@ -10,47 +10,54 @@ print()
 print("========== WORLD CREATED ==========")
 print("World:", World_Name)
 print("Temperature:", Temperature)
-day = 1
-while day < 5:
-    
-    print("day is : " , day)
-    if Population >= 3:
 
-        Creatures = []
+Creatures = []
 
-        for i in range(Population):
+if Population >= 3:
 
-            print()
-            print("Enter information for Creature", i + 1)
+    # ساخت موجودات فقط یک بار
+    for i in range(Population):
 
-            Creature_Name = input("Name: ")
-            Creature_Age = int(input("Age: "))
-            Creature_Health = int(input("Health: "))
-
-            x = int(input("Position X: "))
-            y = int(input("Position Y: "))
-
-            Creature = {
-                "name": Creature_Name,
-                "age": Creature_Age,
-                "health": Creature_Health,
-                "position": (x, y)
-            }
-
-            Creatures.append(Creature)
-            print (Creature_Health - 10)
         print()
-        print("========== CREATURES ==========")
+        print("Enter information for Creature", i + 1)
 
-        for creature in Creatures:
-            print("Creature:", creature["name"])
-            print("Age:", creature["age"])
-            print("Health:", creature["health"] - 10)
-            print("Position:", creature["position"])
-            print()
+        Creature_Name = input("Name: ")
+        Creature_Age = int(input("Age: "))
+        Creature_Health = int(input("Health: "))
 
-    else:
-        print("Population must be at least 3.")
+        x = int(input("Position X: "))
+        y = int(input("Position Y: "))
+
+        Creature = {
+            "name": Creature_Name,
+            "age": Creature_Age,
+            "health": Creature_Health,
+            "position": (x, y)
+        }
+
+        Creatures.append(Creature)
+
+else:
+    print("Population must be at least 3.")
+
+
+day = 1
+
+while day < 5:
+
+    print()
+    print("========== DAY", day, "==========")
+
+    # کم شدن Health موجودات
+    for creature in Creatures:
+
+        creature["health"] = creature["health"] - 10
+
+        print("Creature:", creature["name"])
+        print("Age:", creature["age"])
+        print("Health:", creature["health"])
+        print("Position:", creature["position"])
+        print()
 
     if World_Active == 1:
         print("========== WORLD STATUS ==========")
@@ -64,7 +71,7 @@ while day < 5:
 
     else:
         print("Invalid world status.")
-        
-    day +=1
-print("============")
 
+    day += 1
+
+print("============")
