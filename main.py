@@ -2,6 +2,7 @@ print("========== WORLD SIMULATOR ==========")
 
 Temperature = 24.5
 
+#ورودی ها از کاربر
 World_Name = input("Enter world name: ")
 Population = int(input("Enter Population: "))
 World_Active = int(input("Is the game active? (1/0): "))
@@ -11,7 +12,9 @@ print("========== WORLD CREATED ==========")
 print("World:", World_Name)
 print("Temperature:", Temperature)
 
+#لیستی از موجودات
 Creatures = []
+
 
 if Population >= 3:
 
@@ -34,12 +37,11 @@ if Population >= 3:
             "health": Creature_Health,
             "position": (x, y)
         }
-
+        
         Creatures.append(Creature)
 
 else:
     print("Population must be at least 3.")
-
 
 day = 1
 
@@ -47,10 +49,12 @@ while day < 5:
 
     print()
     print("========== DAY", day, "==========")
-
+    
+    
     # کم شدن Health موجودات
     for creature in Creatures:
-
+        if creature["health"] < 0:
+            Creatures.remove(creature)
         creature["health"] = creature["health"] - 10
 
         print("Creature:", creature["name"])
@@ -58,7 +62,7 @@ while day < 5:
         print("Health:", creature["health"])
         print("Position:", creature["position"])
         print()
-
+    
     if World_Active == 1:
         print("========== WORLD STATUS ==========")
         print("World is running...")
