@@ -1,10 +1,10 @@
-def show_status(health):
-    if Health >= 70:
-        return "Healthy"
-    elif Health >= 30:
-        return "Weak"
-    else:
-        return "Critical"
+def check_population(population):
+    if population > 0:
+        return "World has life"
+    elif population == 0:
+        return "World is empty"
+    elif  population < 0:
+        return "Invalid population"
     
-status = show_status(80)
-print(status)
+status_population = check_population(10)
+print(status_population)
