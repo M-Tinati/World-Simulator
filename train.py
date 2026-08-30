@@ -1,9 +1,10 @@
-def show_status(Health):
+def show_status(health):
     if Health >= 70:
-        print("Healthy")
+        return "Healthy"
     elif Health >= 30:
-        print("Weak")
+        return "Weak"
     else:
-        print("Critical")
+        return "Critical"
     
-show_status(80)
+status = show_status(80)
+print(status)
